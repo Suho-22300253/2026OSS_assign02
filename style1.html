@@ -7,20 +7,25 @@
     <title>Document</title>
     <link rel="stylesheet" href="" style.css>
     <style>
-        body { /*body 전체에 적용이 되는 내용*/
-            font: 100% Lucida Sans, Verdana; /*100% 기본 글자크기 이용*/ 
+        body {
+            /*body 전체에 적용이 되는 내용*/
+            font: 100% Lucida Sans, Verdana;
+            /*100% 기본 글자크기 이용*/
             margin: 20px;
             line-height: 26px;
         }
-        #title{
-            color : white;
+
+        #title {
+            color: white;
             background-color: #04AA6D;
-            padding : 10px;
+            padding: 15px;
             margin: 4px;
             border-radius: 4px;
         }
 
-        #title h1,#title p{ /*h1과 p가 가지고 있는 기본 margin, padding을 없앰*/
+        #title h1,
+        #title p {
+            /*h1과 p가 가지고 있는 기본 margin, padding을 없앰*/
             margin: 0px;
             padding: 0px;
         }
@@ -31,12 +36,17 @@
 
         #menubar {
             width: 200px;
-            float:left;
         }
 
         #maincontents {
             flex: 1;
             padding: 10px;
+            margin-left: 10px;
+            padding-bottom: 30px;
+        }
+
+        #maincontents a {
+            color: black;
         }
 
         #sidebar {
@@ -53,69 +63,86 @@
             padding: 0;
         }
 
-        #currentpage{
-            background-color: #04AA6D !important;
-            border-color: #04AA6D !important;
-            color: white;
-            font-weight: bold;
-        }
-
         #menulist li {
             list-style-type: none;
             margin: 4px;
             background-color: #f1f1f1;
             border: 1px solid #d4d4d4;
             padding: 2px;
-            cursor: pointer;
             border-radius: 4px;
         }
 
-        #bottom{
+        #menulist li a {
+            display: block;
+            text-decoration: none;
+            color: black;
+        }
+
+        #menulist .current {
+            background-color: #04AA6D;
+            border-color: #04AA6D;
+        }
+
+        #menulist .current a {
+            color: white;
+            font-weight: bold;
+        }
+
+        #bottom {
             border: 1px solid #d4d4d4;
-            background-color:#f1f1f1;
+            background-color: #f1f1f1;
             text-align: center;
             padding: 10px;
             font-size: 70%;
             line-height: 14px;
             border-radius: 4px;
         }
-
-
     </style>
-    
+
 
 </head>
 
 <body>
     <header>
-        <div id = "title">
+        <div id="title">
             <h1>Welcome to My Homepage</h1>
             <p>Use the menu to select different Stylesheets</p>
         </div>
-        
+
     </header>
 
 
     <main>
-        <nav id = "menubar">
-            <ul id = "menulist">
-                <li id = "currentpage" onclick="reStyle(0)" >Stylesheet 1</li>
-                <li onclick="reStyle(1)">Stylesheet 2</li>
-                <li onclick="reStyle(2)">No Stylesheet</li>
+        <nav id="menubar">
+            <ul id="menulist">
+                <li class="current">
+                    <a href="style1.html">Style 1</a>
+                </li>
+
+                <li>
+                    <a href="style2.html">Style 2</a>
+                </li>
+
+                <li>
+                    <a href="nostyle.html">No Style</a>
+                </li>
             </ul>
         </nav>
 
         <div id="maincontents">
             <h1>Same Page Different Stylesheets</h1>
-            <div>
+            <p>
                 This is a demonstration of how different stylesheets can change the layout of your HTML page. You can
                 change
                 the layout of this page by selecting different stylesheets in the menu, or by selecting one of the
                 following
                 links:<br>
-            </div>
 
-            <a href="style1.html">Style 1</a>, <a href="style2.html">Style 2</a>.
+                <a href="style1.html">Style 1</a>,
+                <a href="style2.html">Style 2</a>.
+            </p>
+
+
 
             <h2>No Styles</h2>
             <div>
@@ -138,7 +165,7 @@
     </main>
 
 
-    <footer id = "bottom">
+    <footer id="bottom">
         <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
             laoreet dolore
             magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit

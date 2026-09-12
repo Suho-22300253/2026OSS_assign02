@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="" style.css>
-    
-    h1title{
 
-    }
+    <style>
+        #list a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+    
 </head>
 
 <body>
@@ -22,12 +25,9 @@
 
     <main>
         <nav> <!--다른 섹션으로 이동하는 탐색(navigation) 링크들의 집합을 나타내는 시멘틱-->
-            <ul>
-                <li>Stylesheet 1</li>
-                <li>Stylesheet 2</li>
-                <li>Stylesheet 3</li>
-                <li>Stylesheet 4</li>
-                <li>No Stylesheet</li>
+            <ul id = "list">
+                <li><a href="style1.html">Style 1</a></li>
+                <li><a href="style2.html">Style 2</a></li>
             </ul>
         </nav>
 
@@ -55,9 +55,11 @@
 
         <div id="sidebar">
             <h3>Side-Bar</h3>
-            <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
                 laoreet dolore
                 magna aliquam erat volutpat.
+                </p>
             </div>
         </div>
 
@@ -65,7 +67,8 @@
 
 
     <footer>
-        <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+        <div>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
             laoreet dolore
             magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
             lobortis
